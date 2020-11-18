@@ -16,7 +16,9 @@ const todoApp = new Vue ({
   },
   methods: {
     pushItem: function () { // inserisce l'elemento nella to-do list
-      return this.todoElements.push(this.items);
+      while (this.items != "") {
+        return this.todoElements.push(this.items);
+      }
     },
     removeItem: function () { // elimina l'elemento dalla to-do list
       return this.todoElements.pop(this.items);
@@ -30,5 +32,12 @@ const todoApp = new Vue ({
         this.selectedElements.push(e);
       }
     },
+    resetInput: function() { // Reset del campo input
+      while (this.todoElements!=[]) {
+        this.pushItem();
+        return this.items ="";
+      }
+
+    }
   }
 })

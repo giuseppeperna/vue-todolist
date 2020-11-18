@@ -30,8 +30,8 @@
         <div class="container">
           <div class="row">
             <div class="col-xs-12 main-colour container-flex flex-row justify-center">
-              <input id="input-element" @keypress.enter="pushItem" type="text" v-model="items" placeholder="Nuovo To-do">
-              <button id="add-element" type="button" name="button" @click="pushItem">Aggiungi</button>
+              <input id="input-element" @keypress.enter="pushItem; resetInput()" type="text" v-model="items" placeholder="Nuovo To-do">
+              <button id="add-element" type="button" name="button" @click="pushItem; resetInput()">Aggiungi</button>
             </div>
           </div>
 
