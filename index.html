@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <!-- FONT-AWESOME -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <!-- BOOTSTRAP -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- VUE.JS -->
+    <script src="libs/vue.js" charset="utf-8"></script>
+    <title>Vue to-do list</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div id="todoApp">
+        <h1 class="text-center font-w-800">TO-DO LIST</h1>
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12 container-flex flex-row justify-center">
+              <input type="text" v-model="items">
+              <button type="button" name="button" @click="pushItem">Aggiungi</button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 container-flex flex-column justify-center center-items">
+              <ul>
+                  <li v-bind:class="{ activeEl: (isActive !== selectedElements.includes(e)) }" v-for="(e, index) in todoElements" @click="toggleItem(e)" class="card container-flex flex-row justify-around center-items">
+                  <span>{{e}}</span>
+                  <a href="#" @click="removeItem">X</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script src="js/main.js" charset="utf-8"></script>
+  </body>
+</html>

@@ -1,0 +1,82 @@
+body {
+  font-size: 15px;
+}
+
+.wrapper {
+  height: 100vh;
+  width: 100%;
+  overflow: auto;
+}
+
+#todoApp {
+  padding-top: 50px;
+}
+
+/* COMMON */
+
+.container-flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.center-items {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-around {
+  justify-content:space-around;
+}
+
+/* COLOURS */
+
+.black-text {
+  color:black;
+}
+
+.grey-text {
+  color:#a4aab0;
+}
+
+.accent-colour {
+ color:
+}
+
+/* TYPOGRAPHY */
+
+.font-w-600 {
+  font-weight: 600;
+}
+
+.font-w-700 {
+  font-weight: 700;
+}
+
+.font-w-800 {
+  font-weight: 800;
+}
+
+.decoration-none {
+  text-decoration: none;
+}
+
+.card {
+  background-color: aquamarine;
+  width: 300px;
+  height: 40px;
+  margin: 10px 0;
+}
+
+.activeEl {
+  background-color: chartreuse;
+}
