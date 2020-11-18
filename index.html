@@ -2,6 +2,8 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
     <!-- FONT-AWESOME -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
@@ -18,21 +20,28 @@
   </head>
   <body>
     <div class="wrapper">
+
+      <!-- SEZIONE OGGETTO VUE -->
       <div id="todoApp">
-        <h1 class="text-center font-w-800">TO-DO LIST</h1>
+        <!-- Logo e campo input -->
+        <div class="text-center">
+          <img class="logo" src="img/logo.png" alt="logo">
+        </div>
         <div class="container">
           <div class="row">
-            <div class="col-xs-12 container-flex flex-row justify-center">
-              <input type="text" v-model="items">
-              <button type="button" name="button" @click="pushItem">Aggiungi</button>
+            <div class="col-xs-12 main-colour container-flex flex-row justify-center">
+              <input id="input-element" type="text" v-model="items" placeholder="Nuovo To-do">
+              <button id="add-element" type="button" name="button" @click="pushItem">Aggiungi</button>
             </div>
           </div>
+
+          <!-- Cards to-do list -->
           <div class="row">
             <div class="col-xs-12 container-flex flex-column justify-center center-items">
-              <ul>
-                  <li v-bind:class="{ activeEl: (isActive !== selectedElements.includes(e)) }" v-for="(e, index) in todoElements" @click="toggleItem(e)" class="card container-flex flex-row justify-around center-items">
+              <ul class="container-cards main-colour container-flex flex-column justify-center center-items">
+                  <li v-bind:class="{ activeEl: (isActive !== selectedElements.includes(e)) }" v-for="(e, index) in todoElements" @click="toggleItem(e)" class="card font-w-600 container-flex flex-row justify-between center-items">
                   <span>{{e}}</span>
-                  <a href="#" @click="removeItem">X</a>
+                  <a href="#" @click="removeItem"><i class="fa fa-times main-colour" aria-hidden="true"></i></a>
                 </li>
               </ul>
             </div>

@@ -1,5 +1,6 @@
 body {
   font-size: 15px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .wrapper {
@@ -34,23 +35,16 @@ body {
   justify-content: center;
 }
 
-.justify-around {
-  justify-content:space-around;
+.justify-between {
+  justify-content:space-between;
 }
 
 /* COLOURS */
 
-.black-text {
-  color:black;
+.main-colour {
+  color: #001533;
 }
 
-.grey-text {
-  color:#a4aab0;
-}
-
-.accent-colour {
- color:
-}
 
 /* TYPOGRAPHY */
 
@@ -62,21 +56,44 @@ body {
   font-weight: 700;
 }
 
-.font-w-800 {
-  font-weight: 800;
+
+#add-element {
+  border-radius: 10px;
+  padding:10px 20px;
+  margin:25px 5px;
 }
 
-.decoration-none {
-  text-decoration: none;
+#input-element {
+  width: 400px;
+  border-radius: 10px;
+  margin:25px 5px;
+  padding: 0 20px;
+  font-size: 1.7rem;
 }
 
 .card {
-  background-color: aquamarine;
-  width: 300px;
-  height: 40px;
+  border-bottom: 1px solid #dadee1;
+  padding: 10px;
   margin: 10px 0;
+  height: 50px;
+  width: 90%;
+  font-size: 1.9rem;
 }
 
 .activeEl {
-  background-color: chartreuse;
+  background-color: #00e165;
+  border-radius: 10px;
+}
+
+.logo {
+  width:400px;
+  margin-bottom: 20px;
+}
+
+.container-cards {
+  background-color: #f5f7f7;
+  border-radius: 10px;
+  padding: 0 25px;
+  width: 650px;
+  margin: 25px 0;
 }
