@@ -19,6 +19,7 @@ const todoApp = new Vue ({
       while (this.items != "") {
         this.todoElements.push(this.items);
         this.items ="";
+        this.isActive = false;
       }
     },
     removeItem: function () { // elimina l'elemento dalla to-do list
