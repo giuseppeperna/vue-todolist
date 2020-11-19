@@ -41,7 +41,7 @@
               <ul class="container-cards main-colour container-flex flex-column justify-center center-items">
                   <li v-bind:class="{ activeEl: (isActive !== selectedElements.includes(e)) }" v-for="(e, index) in todoElements" @click="toggleItem(e)" class="card font-w-600 container-flex flex-row justify-between center-items">
                   <span>{{e}}</span>
-                  <a href="#" @click="removeItem(index)"><i class="fa fa-times main-colour" aria-hidden="true"></i></a>
+                  <a href="#" @click.stop="removeItem(index)"><i class="fa fa-times main-colour" aria-hidden="true"></i></a>
                 </li>
               </ul>
             </div>
