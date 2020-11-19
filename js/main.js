@@ -22,8 +22,8 @@ const todoApp = new Vue ({
         this.isActive = false;
       }
     },
-    removeItem: function () { // elimina l'elemento dalla to-do list
-      return this.todoElements.pop(this.items);
+    removeItem: function (index) { // elimina l'elemento dalla to-do list
+      this.todoElements.splice(index, 1);
     },
     toggleItem: function(e) { // controlla se un elemento è presente tra i contrassegnati e in caso contrario lo aggiunge.
       if (this.selectedElements.includes(e)) {
